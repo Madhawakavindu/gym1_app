@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gym_app/constants/colors.dart';
 import 'package:gym_app/constants/responsive.dart';
 import 'package:gym_app/data/user_data.dart';
+import 'package:gym_app/widgets/progress_card.dart';
 import 'package:intl/intl.dart';
 
 class HomePage extends StatefulWidget {
@@ -45,10 +46,12 @@ class _HomePageState extends State<HomePage> {
                   "${userData.fullName}",
                   style: const TextStyle(
                     fontSize: 25,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w900,
                     color: kMainColor,
                   ),
                 ),
+                const SizedBox(height: 20),
+                ProgressCard(progressValue: 0.5, total: 100),
               ],
             ),
           ),
