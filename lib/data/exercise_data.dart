@@ -1,7 +1,7 @@
 import 'package:gym_app/models/exercice_model.dart';
 
 class ExerciseData {
-  final List<Exercise> exercises = [
+  final List<Exercise> exerciseList = [
     Exercise(
       id: 0,
       exerciseName: "Push Ups",
