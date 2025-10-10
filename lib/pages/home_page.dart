@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      child: ExerciseCard(
+                      child: const ExerciseCard(
                         description: "see more...",
                         imageUrl: "assets/images/exercises/downward.png",
                         title: "Warmup",
@@ -99,18 +99,48 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 const SizedBox(height: 15),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ExerciseCard(
-                      description: "see more...",
-                      imageUrl: "assets/images/exercises/triangle.png",
-                      title: "Exercise",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ExerciseDetailsPage(
+                              exerciseTitle: "Exercise",
+                              exerciseDesciption:
+                                  " A warmup is the essential first phase of any physical activity, consisting of light-to-moderate dynamic movements that gradually prepare your body and mind for more intense exercise. It systematically increases your heart rate, body temperature, and blood flow to the muscles, reducing the risk of injury and improving overall performance.",
+                              exerciseList: exerciseList,
+                            ),
+                          ),
+                        );
+                      },
+                      child: const ExerciseCard(
+                        description: "see more...",
+                        imageUrl: "assets/images/exercises/triangle.png",
+                        title: "Exercise",
+                      ),
                     ),
-                    ExerciseCard(
-                      description: "see more...",
-                      imageUrl: "assets/images/exercises/dragging.png",
-                      title: "Stretching",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ExerciseDetailsPage(
+                              exerciseTitle: "Streching",
+                              exerciseDesciption:
+                                  " A warmup is the essential first phase of any physical activity, consisting of light-to-moderate dynamic movements that gradually prepare your body and mind for more intense exercise. It systematically increases your heart rate, body temperature, and blood flow to the muscles, reducing the risk of injury and improving overall performance.",
+                              exerciseList: exerciseList,
+                            ),
+                          ),
+                        );
+                      },
+                      child: const ExerciseCard(
+                        description: "see more...",
+                        imageUrl: "assets/images/exercises/dragging.png",
+                        title: "Stretching",
+                      ),
                     ),
                   ],
                 ),

@@ -33,11 +33,11 @@ class ExerciseCard extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Image.asset(imageUrl, width: 100, fit: BoxFit.cover),
-            const SizedBox(height: 5),
+            const SizedBox(height: 10),
             Text(
               description,
               style: const TextStyle(
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: FontWeight.normal,
                 color: kGradientBottomColor,
               ),
