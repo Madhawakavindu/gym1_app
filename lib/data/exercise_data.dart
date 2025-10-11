@@ -12,21 +12,21 @@ class ExerciseData {
     Exercise(
       id: 1,
       exerciseName: "Squats",
-      exerciseImageUrl: " assets/images/exercises/hunch.png",
+      exerciseImageUrl: "assets/images/exercises/hunch.png",
       noOfMinuites: 20,
       completed: false,
     ),
     Exercise(
       id: 2,
       exerciseName: "plank",
-      exerciseImageUrl: " assets/images/exercises/yoga.png",
+      exerciseImageUrl: "assets/images/exercises/yoga.png",
       noOfMinuites: 20,
       completed: false,
     ),
     Exercise(
       id: 3,
       exerciseName: "Jumping Jacks",
-      exerciseImageUrl: " assets/images/exercises/hunch.png",
+      exerciseImageUrl: "assets/images/exercises/hunch.png",
       noOfMinuites: 5,
       completed: false,
     ),
@@ -40,7 +40,7 @@ class ExerciseData {
     Exercise(
       id: 5,
       exerciseName: "Treadw",
-      exerciseImageUrl: " assets/images/exercises/treadw.png",
+      exerciseImageUrl: "assets/images/exercises/treadw.png",
       noOfMinuites: 5,
       completed: false,
     ),
@@ -68,7 +68,7 @@ class ExerciseData {
     Exercise(
       id: 9,
       exerciseName: "Squats",
-      exerciseImageUrl: " assets/images/exercises/dragging.png",
+      exerciseImageUrl: "assets/images/exercises/dragging.png",
       noOfMinuites: 5,
       completed: false,
     ),

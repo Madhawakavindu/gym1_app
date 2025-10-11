@@ -13,14 +13,14 @@ User user = User(
     Exercise(
       id: 0,
       exerciseName: "Push Ups",
-      exerciseImageUrl: " assets/images/exercises/cobra.png",
+      exerciseImageUrl: "assets/images/exercises/cobra.png",
       noOfMinuites: 15,
       completed: false,
     ),
     Exercise(
       id: 1,
       exerciseName: "Squats",
-      exerciseImageUrl: " assets/images/exercises/downward.png",
+      exerciseImageUrl: "assets/images/exercises/downward.png",
       noOfMinuites: 20,
       completed: false,
     ),
@@ -41,7 +41,7 @@ User user = User(
     Exercise(
       id: 0,
       exerciseName: "Push Ups",
-      exerciseImageUrl: " assets/images/exercises/cobra.png",
+      exerciseImageUrl: "assets/images/exercises/cobra.png",
       noOfMinuites: 15,
       completed: false,
     ),

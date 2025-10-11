@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                             builder: (context) => ExerciseDetailsPage(
                               exerciseTitle: "Warmup",
                               exerciseDesciption:
-                                  " A warmup is the essential first phase of any physical activity, consisting of light-to-moderate dynamic movements that gradually prepare your body and mind for more intense exercise. It systematically increases your heart rate, body temperature, and blood flow to the muscles, reducing the risk of injury and improving overall performance.",
+                                  "The Warm-Up page helps users prepare their body before starting a workout. It includes light exercises designed to increase blood flow, loosen muscles, and reduce the risk of injury. Each warm-up routine is short, easy to follow, and can be done anywhere.",
                               exerciseList: exerciseList,
                             ),
                           ),
@@ -110,7 +110,7 @@ class _HomePageState extends State<HomePage> {
                             builder: (context) => ExerciseDetailsPage(
                               exerciseTitle: "Exercise",
                               exerciseDesciption:
-                                  " A warmup is the essential first phase of any physical activity, consisting of light-to-moderate dynamic movements that gradually prepare your body and mind for more intense exercise. It systematically increases your heart rate, body temperature, and blood flow to the muscles, reducing the risk of injury and improving overall performance.",
+                                  "The Exercise page is the main section of the app where users can view and perform different workouts. It provides detailed information about each exercise to help users improve strength, fitness, and flexibility.",
                               exerciseList: exerciseList,
                             ),
                           ),
@@ -130,7 +130,7 @@ class _HomePageState extends State<HomePage> {
                             builder: (context) => ExerciseDetailsPage(
                               exerciseTitle: "Streching",
                               exerciseDesciption:
-                                  " A warmup is the essential first phase of any physical activity, consisting of light-to-moderate dynamic movements that gradually prepare your body and mind for more intense exercise. It systematically increases your heart rate, body temperature, and blood flow to the muscles, reducing the risk of injury and improving overall performance.",
+                                  " The Stretching page helps users cool down and relax their muscles after a workout. It includes different stretching routines to improve flexibility, reduce muscle stiffness, and prevent soreness.",
                               exerciseList: exerciseList,
                             ),
                           ),

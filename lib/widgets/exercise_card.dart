@@ -32,7 +32,7 @@ class ExerciseCard extends StatelessWidget {
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            Image.asset(imageUrl, width: 100, fit: BoxFit.cover),
+            Image.asset(imageUrl, width: 100, height: 90, fit: BoxFit.cover),
             const SizedBox(height: 10),
             Text(
               description,

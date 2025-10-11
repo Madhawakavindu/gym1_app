@@ -16,7 +16,7 @@ class EquipmentData {
       id: 1,
       equipmentName: "Resistance Bands",
       equipmentDescription: " Elastic bands used for resistance exercises.",
-      equipmentImageUrl: " assets/images/equipments/checklist.png",
+      equipmentImageUrl: "assets/images/equipments/checklist.png",
       noOfMinuites: 15,
       noOfCalories: 10,
       handOvered: false,
