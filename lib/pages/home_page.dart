@@ -4,6 +4,7 @@ import 'package:gym_app/constants/responsive.dart';
 import 'package:gym_app/data/equipment_data.dart';
 import 'package:gym_app/data/exercise_data.dart';
 import 'package:gym_app/data/user_data.dart';
+import 'package:gym_app/pages/equipments_page.dart';
 
 import 'package:gym_app/pages/exercise_details_page.dart';
 import 'package:gym_app/widgets/exercise_card.dart';
@@ -91,10 +92,24 @@ class _HomePageState extends State<HomePage> {
                         title: "Warmup",
                       ),
                     ),
-                    ExerciseCard(
-                      description: "see more...",
-                      imageUrl: "assets/images/equipments/dumbbells2.png",
-                      title: "Equipment",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => EquipmentDetailsPage(
+                              equipmentTitle: "Equipments",
+                              equipmentDescription: "dkvnkdn",
+                              equipmentList: equipmentList,
+                            ),
+                          ),
+                        );
+                      },
+                      child: const ExerciseCard(
+                        description: "see more...",
+                        imageUrl: "assets/images/equipments/dumbbells2.png",
+                        title: "Equipment",
+                      ),
                     ),
                   ],
                 ),
