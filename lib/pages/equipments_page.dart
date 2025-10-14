@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gym_app/constants/colors.dart';
 import 'package:gym_app/constants/responsive.dart';
 import 'package:gym_app/models/equipment_model.dart';
+import 'package:gym_app/widgets/equipment_card.dart';
 import 'package:intl/intl.dart';
 
 class EquipmentDetailsPage extends StatefulWidget {
@@ -52,19 +53,43 @@ class _EquipmentDetailsPageState extends State<EquipmentDetailsPage> {
           ],
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(kDefaultPadding),
-        child: Column(
-          children: [
-            Text(
-              widget.equipmentDescription,
-              style: const TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.normal,
-                color: kMainColor,
+
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(kDefaultPadding),
+          child: Column(
+            children: [
+              Text(
+                widget.equipmentDescription,
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.normal,
+                  color: kMainColor,
+                ),
               ),
-            ),
-          ],
+              const SizedBox(height: 30),
+              //grid
+              GridView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 1,
+                  crossAxisSpacing: kDefaultPadding,
+                  mainAxisSpacing: kDefaultPadding,
+                ),
+                itemCount: widget.equipmentList.length,
+                itemBuilder: (context, index) {
+                  Equipment equipment = widget.equipmentList[index];
+                  return EquipmentCard(
+                    equipmentName: equipment.equipmentName,
+                    equipmentImageUrl: equipment.equipmentImageUrl,
+                    noOfMinuites: equipment.noOfMinuites,
+                    noOfCalories: equipment.noOfCalories,
+                  );
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

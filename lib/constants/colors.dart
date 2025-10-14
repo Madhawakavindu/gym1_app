@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const kSubtitleColor = Color.fromARGB(227, 227, 223, 223);
+const kSubtitleColor = Color.fromARGB(193, 147, 141, 141);
 const kMainColor = Color(0xFF000000);
 const kMainWhiteColor = Color(0xFFFFFFFF);
 

@@ -99,7 +99,9 @@ class _HomePageState extends State<HomePage> {
                           MaterialPageRoute(
                             builder: (context) => EquipmentDetailsPage(
                               equipmentTitle: "Equipments",
-                              equipmentDescription: "dkvnkdn",
+
+                              equipmentDescription:
+                                  "The app tracks workout activity based on the type of equipment used. Each equipment item is represented with a distinct icon and includes metrics like workout count and calories burned.",
                               equipmentList: equipmentList,
                             ),
                           ),
