@@ -29,7 +29,7 @@ class EquipmentCard extends StatelessWidget {
           children: [
             Text(
               equipmentName,
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
             ),
             const SizedBox(height: 10),
             Row(
@@ -42,7 +42,7 @@ class EquipmentCard extends StatelessWidget {
                     Text(
                       "${noOfMinuites.toString()} Of Workout.",
                       style: const TextStyle(
-                        color: kMainRedColor,
+                        color: kMainPinkColor,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
@@ -50,7 +50,7 @@ class EquipmentCard extends StatelessWidget {
                     Text(
                       "${noOfCalories.toString()} Calories Burned.",
                       style: const TextStyle(
-                        color: kMainRedColor,
+                        color: kMainPinkColor,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),

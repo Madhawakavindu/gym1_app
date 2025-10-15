@@ -76,6 +76,7 @@ class _EquipmentDetailsPageState extends State<EquipmentDetailsPage> {
                   crossAxisCount: 1,
                   crossAxisSpacing: kDefaultPadding,
                   mainAxisSpacing: kDefaultPadding,
+                  childAspectRatio: 16 / 10,
                 ),
                 itemCount: widget.equipmentList.length,
                 itemBuilder: (context, index) {

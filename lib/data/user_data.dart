@@ -4,7 +4,7 @@ import 'package:gym_app/models/user_model.dart';
 
 User user = User(
   userId: "123456",
-  fullName: "Hello, Madhawa",
+  fullName: "Madhawa",
   gender: "male",
   address: "123, main street, city, country",
   age: 24,
