@@ -37,7 +37,7 @@ User user = User(
       handOvered: false,
     ),
   ],
-  favExercisesList: [
+  favExerciseList: [
     Exercise(
       id: 0,
       exerciseName: "Push Ups",

@@ -6,13 +6,20 @@ class AddExerciseCard extends StatefulWidget {
   final String exerciseTitle;
   final String exerciseImageUrl;
   final int noOfMinutes;
-  final void Function() toggelAddExercie;
+  final bool isAdded;
+  final bool isFavourited;
+  final void Function() toggleAddExercise;
+  final void Function() toggleAddFavExercise;
+
   const AddExerciseCard({
     super.key,
     required this.exerciseTitle,
     required this.exerciseImageUrl,
     required this.noOfMinutes,
-    required this.toggelAddExercie,
+    required this.toggleAddExercise,
+    required this.toggleAddFavExercise,
+    required this.isAdded,
+    required this.isFavourited,
   });
 
   @override
@@ -64,12 +71,12 @@ class _AddExerciseCardState extends State<AddExerciseCard> {
                     child: Center(
                       child: IconButton(
                         onPressed: () {
-                          widget.toggelAddExercie();
+                          widget.toggleAddExercise();
                         },
-                        icon: const Icon(
-                          Icons.add,
+                        icon: Icon(
+                          widget.isAdded ? Icons.remove : Icons.add,
                           size: 30,
-                          color: kGradientBottomColor,
+                          color: kMainColor,
                         ),
                       ),
                     ),
@@ -83,11 +90,15 @@ class _AddExerciseCardState extends State<AddExerciseCard> {
                     ),
                     child: Center(
                       child: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.favorite_border,
+                        onPressed: () {
+                          widget.toggleAddFavExercise();
+                        },
+                        icon: Icon(
+                          widget.isFavourited
+                              ? Icons.favorite
+                              : Icons.favorite_border,
                           size: 30,
-                          color: kMainPinkColor,
+                          color: kMainColor,
                         ),
                       ),
                     ),

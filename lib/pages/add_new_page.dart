@@ -4,7 +4,9 @@ import 'package:gym_app/constants/responsive.dart';
 import 'package:gym_app/data/exercise_data.dart';
 import 'package:gym_app/data/user_data.dart';
 import 'package:gym_app/models/exercice_model.dart';
+//import 'package:gym_app/widgets/add_exercise_card.dart';
 import 'package:gym_app/widgets/add_exercise_card.dart';
+//import 'package:gym_app/widgets/add_exercise_card.dart';
 
 class AddNewPage extends StatefulWidget {
   const AddNewPage({super.key});
@@ -66,13 +68,36 @@ class _AddNewPageState extends State<AddNewPage> {
                     itemBuilder: (context, index) {
                       Exercise exercise = exerciseList[index];
                       return AddExerciseCard(
-                        toggelAddExercie: () {
-                          userData.addExercise(exercise);
-                          print(userData.exercisesList.last.exerciseName);
-                        },
                         exerciseTitle: exercise.exerciseName,
                         exerciseImageUrl: exercise.exerciseImageUrl,
                         noOfMinutes: exercise.noOfMinuites,
+                        isAdded: userData.exercisesList.contains(exercise),
+                        isFavourited: userData.favExerciseList.contains(
+                          exercise,
+                        ),
+
+                        toggleAddExercise: () {
+                          setState(() {
+                            if (userData.exercisesList.contains(exercise)) {
+                              userData.removeExercise(exercise);
+                              print(userData.exercisesList.length);
+                            } else {
+                              userData.addExercise(exercise);
+                              print(userData.exercisesList.length);
+                            }
+                          });
+                        },
+                        toggleAddFavExercise: () {
+                          setState(() {
+                            if (userData.favExerciseList.contains(exercise)) {
+                              userData.removeFavExercise(exercise);
+                              print(userData.favExerciseList.length);
+                            } else {
+                              userData.addFavExercise(exercise);
+                              print(userData.favExerciseList.length);
+                            }
+                          });
+                        },
                       );
                     },
                   ),

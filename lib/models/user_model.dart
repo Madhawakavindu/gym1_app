@@ -14,7 +14,7 @@ class User {
   final List<Exercise> exercisesList;
   final List<Equipment> equipmentList;
 
-  final List<Exercise> favExercisesList;
+  final List<Exercise> favExerciseList;
   final List<Equipment> favEquipmentList;
 
   User({
@@ -26,7 +26,7 @@ class User {
     required this.description,
     required this.exercisesList,
     required this.equipmentList,
-    required this.favExercisesList,
+    required this.favExerciseList,
     required this.favEquipmentList,
   });
 
@@ -36,5 +36,19 @@ class User {
 
   void addExercise(Exercise exercise) {
     exercisesList.add(exercise);
+  }
+
+  void removeExercise(Exercise exercise) {
+    exercisesList.remove(exercise);
+  }
+
+  //method to add new fav
+  void addFavExercise(Exercise exercise) {
+    favExerciseList.add(exercise);
+  }
+
+  //method to remove fav
+  void removeFavExercise(Exercise exercise) {
+    favExerciseList.remove(exercise);
   }
 }
