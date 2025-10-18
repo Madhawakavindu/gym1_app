@@ -66,6 +66,10 @@ class _AddNewPageState extends State<AddNewPage> {
                     itemBuilder: (context, index) {
                       Exercise exercise = exerciseList[index];
                       return AddExerciseCard(
+                        toggelAddExercie: () {
+                          userData.addExercise(exercise);
+                          print(userData.exercisesList.last.exerciseName);
+                        },
                         exerciseTitle: exercise.exerciseName,
                         exerciseImageUrl: exercise.exerciseImageUrl,
                         noOfMinutes: exercise.noOfMinuites,

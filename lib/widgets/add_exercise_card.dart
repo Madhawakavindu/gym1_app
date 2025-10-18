@@ -6,11 +6,13 @@ class AddExerciseCard extends StatefulWidget {
   final String exerciseTitle;
   final String exerciseImageUrl;
   final int noOfMinutes;
+  final void Function() toggelAddExercie;
   const AddExerciseCard({
     super.key,
     required this.exerciseTitle,
     required this.exerciseImageUrl,
     required this.noOfMinutes,
+    required this.toggelAddExercie,
   });
 
   @override
@@ -61,7 +63,9 @@ class _AddExerciseCardState extends State<AddExerciseCard> {
                     ),
                     child: Center(
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          widget.toggelAddExercie();
+                        },
                         icon: const Icon(
                           Icons.add,
                           size: 30,

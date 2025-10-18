@@ -29,4 +29,12 @@ class User {
     required this.favExercisesList,
     required this.favEquipmentList,
   });
+
+  // methodes
+
+  //methode to add new exer to the exeList
+
+  void addExercise(Exercise exercise) {
+    exercisesList.add(exercise);
+  }
 }
