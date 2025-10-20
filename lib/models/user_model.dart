@@ -69,4 +69,67 @@ class User {
   void removeFavEquipment(Equipment equipment) {
     favEquipmentList.remove(equipment);
   }
+
+  //method to cal the total minui spend
+  int calculateTotalMinutesSpend() {
+    int totalMinuitesSpend = 0;
+
+    //loot through the exerciseslist and cal the no of minuites
+    for (var exercise in exercisesList) {
+      totalMinuitesSpend += exercise.noOfMinuites;
+    }
+    //loot through the eequipment and cal the no of minuites
+    for (var equipment in equipmentList) {
+      totalMinuitesSpend += equipment.noOfMinuites;
+    }
+    return totalMinuitesSpend;
+  }
+
+  //method to mark an exercise as completed
+  void markExerciseAsCompleted(int exerciseId) {
+    final exercise = exercisesList.firstWhere(
+      (exercise) => exercise.id == exerciseId,
+    );
+    exercise.completed = true;
+    //remove exercise
+
+    removeExercise(exercise);
+
+    totalExercisesCompleted++;
+  }
+
+  // method to mark and equipment as handed over
+  void markAsHandovered(int equipmentId) {
+    final equipment = equipmentList.firstWhere(
+      (equipment) => equipment.id == equipmentId,
+    );
+    equipment.handOvered == true;
+
+    //remove equipment
+    removeEquipment(equipment);
+
+    totalequipmentsHandOvered++;
+  }
+  //method to calculate the total number of calories by the user
+
+  double calculateTotalCaloriesBurned() {
+    double totalcaloriesBorned = 0;
+
+    for (var equipment in equipmentList) {
+      totalcaloriesBorned += equipment.noOfCalories;
+    }
+
+    //convert to totalcaloriesBorned to  value between 0 and 1
+    if (totalcaloriesBorned > 0 && totalcaloriesBorned <= 10) {
+      totalcaloriesBorned = totalcaloriesBorned / 10;
+    }
+    if (totalcaloriesBorned > 10 && totalcaloriesBorned <= 100) {
+      totalcaloriesBorned = totalcaloriesBorned / 100;
+    }
+    if (totalcaloriesBorned > 100 && totalcaloriesBorned <= 1000) {
+      totalcaloriesBorned = totalcaloriesBorned / 1000;
+    }
+
+    return totalcaloriesBorned;
+  }
 }
