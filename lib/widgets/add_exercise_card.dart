@@ -32,7 +32,7 @@ class _AddExerciseCardState extends State<AddExerciseCard> {
     return Container(
       width: 200,
       margin: EdgeInsets.only(right: 15),
-      //height: 200,
+      //height: 300,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: const Color.fromARGB(193, 222, 214, 214),
@@ -43,16 +43,24 @@ class _AddExerciseCardState extends State<AddExerciseCard> {
       child: Padding(
         padding: EdgeInsets.all(kDefaultPadding),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
               widget.exerciseTitle,
+              textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 10),
-            Image.asset(widget.exerciseImageUrl, width: 100, fit: BoxFit.cover),
-            const SizedBox(height: 10),
+            const SizedBox(height: 8),
+
+            SizedBox(
+              height: 85,
+              child: Image.asset(widget.exerciseImageUrl, fit: BoxFit.contain),
+            ),
+            const SizedBox(height: 8),
             Text(
               "${widget.noOfMinutes.toString()} Minuites",
+              textAlign: TextAlign.center,
               style: TextStyle(fontSize: 16, color: kMainPinkColor),
             ),
             const SizedBox(height: 10),
@@ -62,8 +70,8 @@ class _AddExerciseCardState extends State<AddExerciseCard> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    width: 60,
-                    height: 60,
+                    width: 50,
+                    height: 50,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: kMainBoldColor.withOpacity(0.2),
@@ -75,15 +83,15 @@ class _AddExerciseCardState extends State<AddExerciseCard> {
                         },
                         icon: Icon(
                           widget.isAdded ? Icons.remove : Icons.add,
-                          size: 30,
+                          size: 25,
                           color: kMainColor,
                         ),
                       ),
                     ),
                   ),
                   Container(
-                    width: 60,
-                    height: 60,
+                    width: 50,
+                    height: 50,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: kMainBoldColor.withOpacity(0.2),
@@ -97,7 +105,7 @@ class _AddExerciseCardState extends State<AddExerciseCard> {
                           widget.isFavourited
                               ? Icons.favorite
                               : Icons.favorite_border,
-                          size: 30,
+                          size: 25,
                           color: kMainColor,
                         ),
                       ),

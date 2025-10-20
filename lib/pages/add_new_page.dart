@@ -66,7 +66,7 @@ class _AddNewPageState extends State<AddNewPage> {
                 SizedBox(height: 15),
                 //list view to scroll horizontally
                 SizedBox(
-                  height: 200,
+                  height: 250,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: exerciseList.length,
